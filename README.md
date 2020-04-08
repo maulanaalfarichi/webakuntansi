@@ -1,6 +1,6 @@
 # Sistem Informasi Akuntansi
-Web Akuntansi - Native
-*datatidakasli
+Web Akuntansi - Native.
+NB: Data palsu
 
 ---
 
