@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Bulan Mei 2019 pada 12.59
--- Versi server: 10.1.38-MariaDB
--- Versi PHP: 7.3.2
+-- Generation Time: Apr 08, 2020 at 04:10 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `webakuntansi`
+-- Database: `sia`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bagan_akun`
+-- Table structure for table `bagan_akun`
 --
 
 CREATE TABLE `bagan_akun` (
@@ -40,7 +40,7 @@ CREATE TABLE `bagan_akun` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `bagan_akun`
+-- Dumping data for table `bagan_akun`
 --
 
 INSERT INTO `bagan_akun` (`id_baganakun`, `kode_akun`, `nama_akun`, `posisi`, `status_akun`, `posisi_neraca`, `pm`, `jenis`) VALUES
@@ -60,7 +60,7 @@ INSERT INTO `bagan_akun` (`id_baganakun`, `kode_akun`, `nama_akun`, `posisi`, `s
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hutang`
+-- Table structure for table `hutang`
 --
 
 CREATE TABLE `hutang` (
@@ -73,7 +73,7 @@ CREATE TABLE `hutang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `hutang`
+-- Dumping data for table `hutang`
 --
 
 INSERT INTO `hutang` (`id_hutang`, `id_baganakun`, `nomortransaksi_hutang`, `tanggal_hutang`, `keterangan_hutang`, `total_hutang`) VALUES
@@ -82,7 +82,7 @@ INSERT INTO `hutang` (`id_hutang`, `id_baganakun`, `nomortransaksi_hutang`, `tan
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jurnal_umum`
+-- Table structure for table `jurnal_umum`
 --
 
 CREATE TABLE `jurnal_umum` (
@@ -96,7 +96,7 @@ CREATE TABLE `jurnal_umum` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jurnal_umum`
+-- Dumping data for table `jurnal_umum`
 --
 
 INSERT INTO `jurnal_umum` (`id_jurnalumum`, `tanggal_jurnalumum`, `nomorbukti_jurnalumum`, `keterangan_jurnalumum`, `id_baganakun`, `debit_jurnalumum`, `kredit_jurnalumum`) VALUES
@@ -123,7 +123,7 @@ INSERT INTO `jurnal_umum` (`id_jurnalumum`, `tanggal_jurnalumum`, `nomorbukti_ju
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kas`
+-- Table structure for table `kas`
 --
 
 CREATE TABLE `kas` (
@@ -137,7 +137,7 @@ CREATE TABLE `kas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kas`
+-- Dumping data for table `kas`
 --
 
 INSERT INTO `kas` (`id_kas`, `nomortransaksi_kas`, `tanggal_kas`, `keterangan_kas`, `id_baganakun`, `debit_kas`, `kredit_kas`) VALUES
@@ -164,7 +164,7 @@ INSERT INTO `kas` (`id_kas`, `nomortransaksi_kas`, `tanggal_kas`, `keterangan_ka
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `modal`
+-- Table structure for table `modal`
 --
 
 CREATE TABLE `modal` (
@@ -177,7 +177,7 @@ CREATE TABLE `modal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `modal`
+-- Dumping data for table `modal`
 --
 
 INSERT INTO `modal` (`id_modal`, `id_baganakun`, `nomortransaksi_modal`, `tanggal_modal`, `keterangan_modal`, `total_modal`) VALUES
@@ -186,7 +186,7 @@ INSERT INTO `modal` (`id_modal`, `id_baganakun`, `nomortransaksi_modal`, `tangga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembayaran`
+-- Table structure for table `pembayaran`
 --
 
 CREATE TABLE `pembayaran` (
@@ -199,7 +199,7 @@ CREATE TABLE `pembayaran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `pembayaran`
+-- Dumping data for table `pembayaran`
 --
 
 INSERT INTO `pembayaran` (`id_pembayaran`, `id_baganakun`, `nomortransaksi_pembayaran`, `tanggal_pembayaran`, `keterangan_pembayaran`, `total_pembayaran`) VALUES
@@ -213,7 +213,7 @@ INSERT INTO `pembayaran` (`id_pembayaran`, `id_baganakun`, `nomortransaksi_pemba
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pembelian`
+-- Table structure for table `pembelian`
 --
 
 CREATE TABLE `pembelian` (
@@ -226,7 +226,7 @@ CREATE TABLE `pembelian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `pembelian`
+-- Dumping data for table `pembelian`
 --
 
 INSERT INTO `pembelian` (`id_pembelian`, `id_baganakun`, `nomortransaksi_pembelian`, `tanggal_pembelian`, `keterangan_pembelian`, `total_pembelian`) VALUES
@@ -236,7 +236,7 @@ INSERT INTO `pembelian` (`id_pembelian`, `id_baganakun`, `nomortransaksi_pembeli
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pendapatan`
+-- Table structure for table `pendapatan`
 --
 
 CREATE TABLE `pendapatan` (
@@ -249,7 +249,7 @@ CREATE TABLE `pendapatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `pendapatan`
+-- Dumping data for table `pendapatan`
 --
 
 INSERT INTO `pendapatan` (`id_pendapatan`, `id_baganakun`, `nomortransaksi_pendapatan`, `tanggal_pendapatan`, `keterangan_pendapatan`, `total_pendapatan`) VALUES
@@ -264,7 +264,7 @@ INSERT INTO `pendapatan` (`id_pendapatan`, `id_baganakun`, `nomortransaksi_penda
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `prive`
+-- Table structure for table `prive`
 --
 
 CREATE TABLE `prive` (
@@ -277,7 +277,7 @@ CREATE TABLE `prive` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `prive`
+-- Dumping data for table `prive`
 --
 
 INSERT INTO `prive` (`id_prive`, `id_baganakun`, `nomortransaksi_prive`, `tanggal_prive`, `keterangan_prive`, `total_prive`) VALUES
@@ -287,7 +287,7 @@ INSERT INTO `prive` (`id_prive`, `id_baganakun`, `nomortransaksi_prive`, `tangga
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -299,7 +299,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `kontak`) VALUES
@@ -307,135 +307,136 @@ INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `kontak`) VALUES
 (22, 'renanda', 'renanda', '2', '987456'),
 (23, 'candra', 'candra', '3', '085101404001'),
 (24, 'dava', 'dava', '2', '082265598874'),
-(26, 'tian', 'tian', '2', '082123456789');
+(26, 'tian', 'tian', '2', '082123456789'),
+(27, 'admin', 'admin', '1', '12345678');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `bagan_akun`
+-- Indexes for table `bagan_akun`
 --
 ALTER TABLE `bagan_akun`
   ADD PRIMARY KEY (`id_baganakun`);
 
 --
--- Indeks untuk tabel `hutang`
+-- Indexes for table `hutang`
 --
 ALTER TABLE `hutang`
   ADD PRIMARY KEY (`id_hutang`);
 
 --
--- Indeks untuk tabel `jurnal_umum`
+-- Indexes for table `jurnal_umum`
 --
 ALTER TABLE `jurnal_umum`
   ADD PRIMARY KEY (`id_jurnalumum`);
 
 --
--- Indeks untuk tabel `kas`
+-- Indexes for table `kas`
 --
 ALTER TABLE `kas`
   ADD PRIMARY KEY (`id_kas`);
 
 --
--- Indeks untuk tabel `modal`
+-- Indexes for table `modal`
 --
 ALTER TABLE `modal`
   ADD PRIMARY KEY (`id_modal`);
 
 --
--- Indeks untuk tabel `pembayaran`
+-- Indexes for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   ADD PRIMARY KEY (`id_pembayaran`);
 
 --
--- Indeks untuk tabel `pembelian`
+-- Indexes for table `pembelian`
 --
 ALTER TABLE `pembelian`
   ADD PRIMARY KEY (`id_pembelian`);
 
 --
--- Indeks untuk tabel `pendapatan`
+-- Indexes for table `pendapatan`
 --
 ALTER TABLE `pendapatan`
   ADD PRIMARY KEY (`id_pendapatan`);
 
 --
--- Indeks untuk tabel `prive`
+-- Indexes for table `prive`
 --
 ALTER TABLE `prive`
   ADD PRIMARY KEY (`id_prive`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bagan_akun`
+-- AUTO_INCREMENT for table `bagan_akun`
 --
 ALTER TABLE `bagan_akun`
   MODIFY `id_baganakun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT untuk tabel `hutang`
+-- AUTO_INCREMENT for table `hutang`
 --
 ALTER TABLE `hutang`
   MODIFY `id_hutang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `jurnal_umum`
+-- AUTO_INCREMENT for table `jurnal_umum`
 --
 ALTER TABLE `jurnal_umum`
   MODIFY `id_jurnalumum` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- AUTO_INCREMENT untuk tabel `kas`
+-- AUTO_INCREMENT for table `kas`
 --
 ALTER TABLE `kas`
   MODIFY `id_kas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT untuk tabel `modal`
+-- AUTO_INCREMENT for table `modal`
 --
 ALTER TABLE `modal`
   MODIFY `id_modal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `pembayaran`
+-- AUTO_INCREMENT for table `pembayaran`
 --
 ALTER TABLE `pembayaran`
   MODIFY `id_pembayaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT untuk tabel `pembelian`
+-- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
   MODIFY `id_pembelian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT untuk tabel `pendapatan`
+-- AUTO_INCREMENT for table `pendapatan`
 --
 ALTER TABLE `pendapatan`
   MODIFY `id_pendapatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT untuk tabel `prive`
+-- AUTO_INCREMENT for table `prive`
 --
 ALTER TABLE `prive`
   MODIFY `id_prive` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_user` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
