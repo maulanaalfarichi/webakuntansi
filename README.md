@@ -14,5 +14,5 @@ Web Akuntansi - Native
 
 ---
 ## Screenshot
-(https://i.ibb.co/wQr1wBm/Screenshot-32.png)
+!(https://i.ibb.co/wQr1wBm/Screenshot-32.png)
 
