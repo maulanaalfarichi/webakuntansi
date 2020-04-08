@@ -14,5 +14,5 @@ Web Akuntansi - Native
 
 ---
 ## Screenshot
-![laporan Perubahan Modal](https://i.ibb.co/wQr1wBm/Screenshot-32.png)
+![1](https://ibb.co/jhG3hZR)
 
