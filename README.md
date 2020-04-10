@@ -1,6 +1,7 @@
 # Sistem Informasi Akuntansi
-Web Akuntansi - Native.
-NB: Data palsu
+- Web Akuntansi - Native.
+- NB: Data palsu
+- index ada di modules
 
 ---
 
